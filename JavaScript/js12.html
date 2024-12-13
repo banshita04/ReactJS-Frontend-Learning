@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script>
+
+            //java script object creation
+            var emp = {"id":101,"name":"Banshita","phoneNo":"9988776655"};
+            console.log(`${emp.name}'s emp id is ${emp.id}
+            and her contact number is ${emp.phoneNo}`);
+
+            var employee=[
+                {"id":102,"name":"Subi","phoneNo":"8988776655"},
+                {"id":103,"name":"Macaroni","phoneNo":"9988676655"},
+                {"id":104,"name":"Manshe","phoneNo":"1234567890"},
+                {"id":105,"name":"Coco","phoneNo":"9988770655"},
+                {"id":106,"name":"Shredder","phoneNo":"9288776655"},
+                {"id":107,"name":"Sawasawa","phoneNo":"9588776655"}
+            ];
+
+            var emp = new Array();
+
+            function addEmp(){
+                //1.read id,name,phoneNo
+                //2.create js obj & store into it
+                //3. push the obj in emps array
+                var id = document.getElementById("i").value;
+                var name = document.getElementById("n").value;
+                var phn = document.getElementById("p").value;
+                var json = {"id":id,"name":name,"phoneNo":phn};
+                emp.push(json);
+            }
+
+            function display(){
+                //display all emps in console
+                // emp.forEach(x=>console.log(x));
+                document.getElementById("myHeading").innerHTML="";
+                for(var i=0;i<emp.length;i++){
+                    document.getElementById("myHeading").innerHTML+="<li>"+"name: {"+emp[i].name+"} id: {"+emp[i].id+"} phone no: {"+emp[i].phn+" }"+"</li>"
+                }
+
+
+            }
+
+            //iterate the array and display all employees in the console
+            // employee.forEach(emp=>console.log(`${emp.name}'s emp id is ${emp.id}
+            // and her contact number is ${emp.phoneNo}`));
+        </script>
+    </head>
+    <body>
+        Enter id: <input type="number" id="i"> <br>
+        Enter name: <input type="textarea" id="n"> <br>
+        Enter phone no.: <input type="textarea" id="p"> <br>
+        <button onclick="addEmp()">Send</button>
+        <button onclick="display()">View Employee</button>
+        <h3 id="myHeading"></h3>
+    </body>
+</html>

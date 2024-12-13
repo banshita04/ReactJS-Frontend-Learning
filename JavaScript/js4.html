@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script>
+
+            var count = 0;
+
+            function counter1(){
+                var heading = document.getElementById("myHeading");
+                heading.innerHTML=count++;
+            }
+
+            var t;
+            function startTimer(){
+                //timer should start here
+                t=setInterval(counter2,1000);//1000 is in millisecond
+            }
+
+            function stopTimer(){
+                clearTimeout(t);
+            }
+
+            function counter2(){
+                count++;
+                var heading = document.getElementById("counterHeading");
+                heading.innerHTML=count;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Counter Demo</h1>
+        <button onclick="counter1()">Click me</button>
+        <h1 id="myHeading">Heading</h1>
+
+        <h1>Timer Event</h1>
+        <button onclick="startTimer()">Start Timer</button>
+        <button onclick="stopTimer()">Stop Timer</button>
+        <h1 id="counterHeading">timer will appear here</h1>
+    </body>
+</html>

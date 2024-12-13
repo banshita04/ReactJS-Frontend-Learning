@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script>
+        function display(){
+            console.log("Display is working");
+            var name = document.getElementById("name").value;
+            if(name==""){
+                document.getElementById("errorName").innerHTML="Wrong input! Try again...";
+            }else{
+                var heading = document.getElementById("myHeading");
+                heading.innerHTML="The name you entered is "+name;
+            }
+        }
+    </script>
+    <style>
+        span{color:red; font-size:90%;}
+    </style>
+</head>
+<body>
+    Enter the name: <input type="text" id="name">
+    <span id="errorName"></span>
+    <br>
+    <button onclick="display()">Enter</button>
+    <h4 id="myHeading"> </h4>
+    
+</body>
+</html>

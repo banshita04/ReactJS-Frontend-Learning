@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+
+            let n = [1,23,51,2,43,23,57,86,22,52,64];
+
+            console.log("----The original array----");
+            n.forEach(v=>console.log(`----${v}-----`));
+
+            findEvenNo = function(i){
+                return i%2==0?true:false;
+            }
+
+            //filter accepts functions as arg and returns another array
+            let evenArr = n.filter(findEvenNo);
+            console.log("----Even numbers----");
+            evenArr.forEach(n=>console.log(n))
+            
+            //to make the code compact
+            let evenAr = n.filter(i=>i%2==0?true:false);
+            console.log("----Even numbers using compact code----");
+            evenAr.forEach(n=>console.log(n))
+
+            //more compact
+            console.log("----Even numbers using more compact code----");
+            let even = n.filter(i=>i%2==0).forEach(n=>console.log(n));
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Filter Function</h1>
+    </body>
+</html>

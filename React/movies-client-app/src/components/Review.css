@@ -1,0 +1,17 @@
+.table {
+    width: 30%;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid rgb(183, 174, 174);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.form-content{
+    align-items: center;
+}
+
+.form-content-add{
+    float: right;
+}

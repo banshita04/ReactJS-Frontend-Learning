@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script>
+            var cities = ["Bangalore", "Mumbai", "Kolkata", "Delhi"];
+            console.log(cities[1]);
+            cities[4] = "Hyderabad";
+            console.log(cities[4]);
+            cities[6]="Pune";
+            console.log(cities[6]);
+            console.log(cities[5]);
+
+            console.log("-------Traditional for loop-------");
+            for(var i = 0; i<cities.length;i++){
+                console.log(cities[i]);
+            }
+
+            console.log("-----for in loop-----");
+            for(var i in cities){//returns index
+                console.log(cities[i]);
+            }
+
+            console.log("-----for each loop-----");
+            for(var c of cities){//returns index
+                console.log(c);
+            }
+
+            cities.shift();//removes first element
+            console.log("----After shifting----")
+            print();
+
+            cities.unshift("Bangalore");//adds first element
+            console.log("----After unshifting----")
+            print();
+
+            cities.push("Mysore");//adds in the last element
+            console.log("----After push----");
+            print();
+
+            cities.splice(2,0,"Kerala","Kashmir");//position,number_of_element_to_be_deleted,elements to add...
+            console.log("----After splice 1----");
+            print();
+
+            cities.splice(2,1);//removes 1 element from 2nd position
+            console.log("----After splice 2----");
+            print();
+
+            function print(){
+                for(var c of cities){
+                console.log(c);
+            }
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript Array Demo</h1>
+    </body>
+</html>

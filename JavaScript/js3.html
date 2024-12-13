@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            function updateHeading(){
+                console.log("h1 button working");
+                //returns h1 element
+                var heading = document.getElementById("myHeading");
+                heading.innerHTML="JavaScript is fun";
+            }
+
+            function copy(){
+                //should called when the p is clicked
+                //read the text of <p>
+                //write the text in <h1>
+                    console.log("p button working");
+                    var paragraph = document.getElementById("myParagraph");
+                    var heading = document.getElementById("myHeading");
+                    heading.innerHTML=paragraph.innerHTML;
+            }
+        </script>
+        <style>
+            p{
+                background-color: chocolate;
+                font-size: 200%;
+                color: rgb(123, 226, 123);
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="updateHeading()">Click me</button>
+        <p id="myParagraph" onclick="copy()">I am paragraph</p>
+        <h1 id="myHeading">I am Heading 1</h1>
+    </body>
+</html>

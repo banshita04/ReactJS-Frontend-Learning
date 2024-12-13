@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function hello(){
+                {
+                    var x = 10;//var is not local variable
+                    let y = 99;//let is used to create local scope variable
+                    const z = 100;//const->constant, this also creates a local variable
+                    // let y = "abc";//ERROR!!!
+                    console.log("In local block "+x);
+                    console.log("y is "+y);
+                }
+                console.log(z)//error->bcz it cant be accessed outside the scope
+                console.log("In hello block "+x);//x is visible outside the scope also
+                var x = "Have a nice day!"; //can redeclare the same variable
+                console.log(x)
+                // console.log("y is "+y);//uncaught reference error
+            }
+            hello();
+        </script>
+    </head>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+
+            let n = [1,23,51,2,43,23,57,86,22,52,64];
+
+            
+            //here print function is getting called for every iteration
+            n.forEach(print);//HOF (accepts another fn as a arg)
+
+            function print(x){
+                console.log(`----${x}----`); // ` is available above the tab button on the keyboard
+            }
+
+            //OR
+
+            console.log("Using Arrow Funtion");
+
+            print = (x)=>console.log(`----${x}----`);//Arrow FUnction
+
+            //OR
+
+            console.log("Using Arrow Funtion");
+
+            n.forEach(x=>console.log(`----${x}----`));//Arrow Function
+
+        </script>
+    </head>
+    <body>
+        <h1>Arrow Function</h1>
+    </body>
+</html>

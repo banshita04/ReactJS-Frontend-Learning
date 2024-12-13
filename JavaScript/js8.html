@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            function calculate(eval,i,j){ //eval <=> a
+                var r = eval(i,j); //eval(10,10) will invoke function(x,y)
+                console.log(r);
+            }
+
+            // a = function(x,y){ //this function has no name, assigned to variable a
+            //     return x+y;
+            // }
+            // calculate(a);
+
+
+
+            // OR
+
+            calculate(function(x,y){return x*y;},8,9);
+            calculate(function(x,y){return x-y;},56,32);
+
+            console.log("Using Arrow Function");
+
+            calculate((x,y)=>x+y,7,8);//Arrow function
+
+
+        </script>
+    </head>
+    <body>
+       <h1>Higher Order Function and Arrow Function</h1> 
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+            var emps=[];
+            function addEmp(){
+                let eid=document.getElementById("usrId").value;
+                let ename=document.getElementById("ename").value;
+                let phoneNo=document.getElementById("phoneNo").value;
+                let e={"eid":eid,"ename":ename,"phoneNo":phoneNo};
+                emps.push(e);
+                alert("Added");
+            }
+            function display(){
+                let r="";
+                emps.forEach(e=>
+                 r=`${r}<tr>
+                    <td>${e.eid}</td>
+                     <td>${e.ename}</td>
+                     <td>${e.phoneNo}</td>
+                     </tr> `);
+                     document.getElementById("empTableBody").innerHTML="";
+                     document.getElementById("empTableBody").innerHTML=r;
+            }
+        </script>
+    </head>
+    <body>
+        Enter Eid :  <input type="text" id="usrId"><br>
+        Enter Name :  <input type="text" id="ename"><br>
+        Enter  phoneNo :  <input type="text" id="phoneNo"><br>
+        <button onclick="addEmp()">Add Emp</button>
+        <button onclick="display()">Display All</button>
+        <table border ="1">
+            <tr>
+                <th>id</th>
+                <th>Ename</th>
+                <th>PhoneNo</th>
+            </tr>
+            <tbody id="empTableBody"></tbody>
+        </table>
+    </body>
+</html>
